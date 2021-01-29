@@ -86,17 +86,17 @@ document.getElementById("caseQntyMinus").addEventListener("click", function () {
     caseItem(false);
 })
 
-function caseItem (increase) {
+function caseItem(increase) {
     const caseInput = document.getElementById("caseQnty");
     const caseCount = parseInt(caseInput.value);
     let caseNewCount = caseCount;
-    if (increase == true){
+    if (increase == true) {
         caseNewCount = caseCount + 1;
     }
-    if (increase == false && caseCount> 0){
-        caseNewCount= caseCount - 1;
+    if (increase == false && caseCount > 0) {
+        caseNewCount = caseCount - 1;
     }
     caseInput.value = caseNewCount;
     const caseTotal = caseNewCount * 59;
-    document.getElementById("caseTotal").innerText = "$" +caseTotal ;
+    document.getElementById("caseTotal").innerText = "$" + caseTotal;
 }
