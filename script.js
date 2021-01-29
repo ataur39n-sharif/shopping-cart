@@ -32,14 +32,14 @@
 //     ProductChange(false);
 // })
 
-//system -3 (code with full function)
+//system -3 (phn item code with full function)
 
 
 function ProductChange(increase) {
 
     const phnInput = document.getElementById("phnQnty");
     const phnCount = parseInt(phnInput.value);
-    let phnNewCount = phnQnty;
+    let phnNewCount = phnCount;
     if (increase == true) {
         phnNewCount = phnCount + 1;
     }
@@ -76,7 +76,7 @@ function ProductChange(increase) {
 // })
 
 
-//system -2 (code with simple function)
+//system -2 ( case item code with simple function)
 
 document.getElementById("caseQntyPlus").addEventListener("click", function () {
     caseItem(true);
@@ -89,11 +89,11 @@ document.getElementById("caseQntyMinus").addEventListener("click", function () {
 function caseItem (increase) {
     const caseInput = document.getElementById("caseQnty");
     const caseCount = parseInt(caseInput.value);
-    let caseNewCount = caseQnty;
+    let caseNewCount = caseCount;
     if (increase == true){
         caseNewCount = caseCount + 1;
     }
-    if (increase == false){
+    if (increase == false && caseCount> 0){
         caseNewCount= caseCount - 1;
     }
     caseInput.value = caseNewCount;
